@@ -1,0 +1,13 @@
+code,col_offset,end_col_offset,filename,issue_confidence,issue_cwe,issue_severity,issue_text,line_number,line_range,more_info,test_id,test_name
+"24         for i in range(rowcount):
+25             text = """".join( [random.choice(string.ascii_letters) for i in range(200)] )
+26             num = random.random() * random.randint(0, 2930)
+",29,64,/content/sqlitebrowser/tests/createtestdb.py,HIGH,"{'id': 330, 'link': 'https://cwe.mitre.org/data/definitions/330.html'}",LOW,Standard pseudo-random generators are not suitable for security/cryptographic purposes.,25,[25],https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random,B311,blacklist
+"25             text = """".join( [random.choice(string.ascii_letters) for i in range(200)] )
+26             num = random.random() * random.randint(0, 2930)
+27             c.execute(""INSERT INTO hugetable(weirdtext, crazynumber) VALUES ( :t, :n);"", {""t"": text, ""n"": num})
+",18,33,/content/sqlitebrowser/tests/createtestdb.py,HIGH,"{'id': 330, 'link': 'https://cwe.mitre.org/data/definitions/330.html'}",LOW,Standard pseudo-random generators are not suitable for security/cryptographic purposes.,26,[26],https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random,B311,blacklist
+"25             text = """".join( [random.choice(string.ascii_letters) for i in range(200)] )
+26             num = random.random() * random.randint(0, 2930)
+27             c.execute(""INSERT INTO hugetable(weirdtext, crazynumber) VALUES ( :t, :n);"", {""t"": text, ""n"": num})
+",36,59,/content/sqlitebrowser/tests/createtestdb.py,HIGH,"{'id': 330, 'link': 'https://cwe.mitre.org/data/definitions/330.html'}",LOW,Standard pseudo-random generators are not suitable for security/cryptographic purposes.,26,[26],https://bandit.readthedocs.io/en/1.8.6/blacklists/blacklist_calls.html#b311-random,B311,blacklist
