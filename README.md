@@ -1,0 +1,1 @@
+# langgraph-security-scan
